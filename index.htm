@@ -8,7 +8,6 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/grid.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Cormorant+Garamond|Montserrat" rel="stylesheet">
 </head>
 
@@ -50,6 +49,7 @@
   </table>
 
   <button type="button" name="button" onclick="myFunction()">Click me!</button>
+  <button type="button" name="button2" onclick="countFunction()">Count me!</button>
 
   <footer>
     <address>
@@ -66,6 +66,23 @@
         if (n === 1) return n;
         return n * faculty(n - 1);
       };
+    }
+  </script>
+
+  <script type="text/javascript">
+    function countFunction() {
+      var inputArray = [];
+      do {
+        var input = prompt("Please enter a non 0 number", 1);
+        if (input !== '0') {
+          inputArray.push(input);
+        }
+      } while (input !== '0');
+
+      inputArray.sort(function(a, b) {
+        return a - b;
+      });
+      alert(inputArray.toString());
     }
   </script>
 
