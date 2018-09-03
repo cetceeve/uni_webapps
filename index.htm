@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>RV</title>
+  <meta name="author" content="Fabian Zeiher">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Cormorant+Garamond|Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Red Velvet</h1>
+  </header>
+  <p>This website is not <b>cute</b>.</p>
+  <img src="./assets/redvelvet.jpg" alt="Red Velvet Bad Boy">
+  <aside>
+    <ul>
+      <li>The Pefect Red Velvet</li>
+      <li>The Red</li>
+    </ul>
+  </aside>
+
+  <table>
+    <thead>
+      Kopfzeile
+    </thead>
+    <tr>
+      <td>dumb dumb</td>
+      <td>time slip</td>
+      <td>day 1</td>
+      <td>happily ever after</td>
+    </tr>
+    <tr>
+      <td>russian roulette</td>
+      <td>talk to me</td>
+      <td>peek-a-boo</td>
+      <td>bad boy</td>
+    </tr>
+    <tr>
+      <td>lucky girl</td>
+      <td>be natural</td>
+      <td>rookie</td>
+      <td>body talk</td>
+    </tr>
+  </table>
+
+  <button type="button" name="button" onclick="myFunction()">Click me!</button>
+
+  <footer>
+    <address>
+      Website created by FZ: <a href="https://github.com/cetceeve">github</a>
+    </address>
+    <time datetime="2018-09-03 13:14">3. September</time>
+  </footer>
+
+  <script type="text/javascript">
+    function myFunction() {
+      alert(faculty(prompt("Please enter a number", 5)));
+
+      function faculty(n) {
+        if (n === 1) return n;
+        return n * faculty(n - 1);
+      };
+    }
+  </script>
+
+</body>
+
+</html>
