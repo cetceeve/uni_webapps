@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Taschenrechner</title>
+  <meta name="author" content="Fabian Zeiher">
+  <meta name="keywords" content="calculator">
+  <meta name="description" content="Cool Calculator">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <input type="number" name="input1" value="0">
+  <select name="selector">
+        <option value="0">+</option>
+        <option value="1">-</option>
+        <option value="2">*</option>
+        <option value="3">/</option>
+  </select>
+  <input type="number" name="input2" value="0">
+  <button onclick="cal()" name="submit">=</button>
+  <output name="result">0</output>
+
+
+  <script type="text/javascript">
+    function cal() {
+      console.log("HI");
+      let i1 = parseFloat(document.getElementsByName('input1')[0].value);
+      let i2 = parseFloat(document.getElementsByName('input2')[0].value);
+      let selectedOption = document.getElementsByName('selector')[0].selectedIndex;
+      let output = document.getElementsByName('result')[0].value;
+      let res = 0;
+
+      console.log(selectedOption);
+      console.log(i1);
+      console.log(i2);
+      switch (selectedOption) {
+        case 0:
+          res = i1 + i2;
+          break;
+        case 1:
+          res = i1 - i2;
+          break;
+        case 2:
+          res = i1 * i2;
+          break;
+        case 3:
+          res = i1 / i2;
+          break;
+        default:
+
+      }
+      console.log(res);
+      document.getElementsByName('result')[0].value = res;
+    }
+  </script>
+</body>
+
+</html>
