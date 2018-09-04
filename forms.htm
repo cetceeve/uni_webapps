@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Taschenrechner</title>
+  <title>Forms</title>
   <meta name="author" content="Fabian Zeiher">
   <meta name="keywords" content="calculator">
   <meta name="description" content="Cool Calculator">
@@ -11,17 +11,19 @@
 </head>
 
 <body>
+  <script type="text/javascript" src="./js/formscheck.js"></script>
   <form>
-    <a>Name:* </a><input type="text" id="username" value="Max, Mustermann" pattern="[a-zA-Z\-]+,\s[a-zA-Z]+" autofocus required> <br>
-    <a>EMail:* </a><input type="email" id="email" value="max.mustermann@domain.de" required> <br>
-    <a>Telephonnummer: </a><input type="text" id="telephonnummer" value="0999 21212121" pattern="([0-9][1-9][1-9][1-9])\s?[0-9]+"> <br>
-    <a>Geburtsdatum:* </a><input type="date" id="birthday" value="2000-01-01" required> <br>
-    <a>Leistungspunkte: </a><input type="range" min="0" max="180" value="50" id="myRange"> <br>
-    <a>Url: </a><input type="url" id="url" value="http://google.de"> <br>
-    <a>Passwort:* </a><input type="password" id="password1" value="" required> <br>
-    <a>Passwort wiederholen:* </a><input type="password" id="password2" value="" required> <br>
+    <span>Name:* </span><input type="text" id="username" value="Max, Mustermann" pattern="[a-zA-Z\-]+,\s[a-zA-Z]+" autofocus required> <br>
+    <span>EMail:* </span><input type="email" id="email" value="max.mustermann@domain.de" required> <br>
+    <span>Telephonnummer: </span><input type="text" id="telephonnummer" value="0999 21212121" pattern="([0-9][1-9][1-9][1-9])\s?[0-9]+"> <br>
+    <span>Geburtsdatum:* </span><input type="date" id="birthday" value="2000-01-01" onchange="checkAge(this.value)" required> <br>
+    <span>Leistungspunkte: </span><input type="range" min="0" max="180" value="50" id="myRange" onchange="updateSliderResult(this.value);checkLP(this.value);"><output id="sliderResult">50</output> <br>
+    <span>Url: </span><input type="url" id="url" value="http://google.de"> <br>
+    <span>Passwort:* </span><input type="password" id="password1" value="" required> <br>
+    <span>Passwort wiederholen:* </span><input type="password" id="password2" value="" onkeyup="checkPasswords(password1.value, this.value)" required> <output id="passwordError"></output><br>
     <input type="submit" id="submitbutton" value="Submit">
   </form>
+
 </body>
 
 </html>
