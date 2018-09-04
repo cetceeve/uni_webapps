@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dialog</title>
+    <meta name="author" content="Fabian Zeiher">
+    <meta name="keywords" content="calculator">
+    <meta name="description" content="Cool Calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <script type="text/javascript" src="./js/dialoganalysis.js"></script>
+    <textarea id="textarea" rows="8" cols="80" autofocus onkeyup="analyseText(this.value)">Enter your text.</textarea> <br>
+    <span>Textlänge: </span><output id="textlength">0</output> <br>
+    <span>Zeichen: </span><output id="chars">0</output> <br>
+    <span>Wörter: </span><output id="words">0</output> <br>
+    <span>Sonderzeichen/Zahlen: </span><output id="special">0</output> <br>
+  </body>
+</html>
