@@ -42,6 +42,5 @@ function checkWords() {
 
 // Anzahl der Sonderzeichen und Zahlen (bzw. Nichtbuchstaben ( a-z , A-Z ))
 function checkSpecials() {
-  let specials = mText.replace(/[a-zA-Z]/g, "");
-  document.getElementById('special').value = specials.length;
+  document.getElementById('special').value = mText.replace(/[a-zA-Z]/g, "").length;
 }
