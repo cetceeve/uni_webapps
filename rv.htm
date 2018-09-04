@@ -65,15 +65,17 @@
       function faculty(n) {
         if (n === 1) return n;
         return n * faculty(n - 1);
-      };
+      }
     }
   </script>
 
   <script type="text/javascript">
     function countFunction() {
       var inputArray = [];
+      var input = prompt("Please enter a non 0 number", 1);
+      inputArray.push(input);
       do {
-        var input = prompt("Please enter a non 0 number", 1);
+        input = prompt("Please enter a non 0 number", 1);
         if (input !== '0') {
           inputArray.push(input);
         }
