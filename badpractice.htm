@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BadPractice</title>
+    <meta name="author" content="Fabian Zeiher">
+    <meta name="keywords" content="prototype">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>$(document).ready(function(){});</script>
+  <script type="text/javascript" src="./js/badpractice.js"></script>
+
+  <body>
+    <input type="text" id="input" value="1,2,3,4,5,6,7,8" onkeyup="parseArray(this.value)"> <br>
+    <button type="button" id="shufflebuttion" onclick="shuffleArray()">Shuffle</button> <br>
+    <div>
+      <p id="output"></p>
+    </div>
+  </body>
+</html>
